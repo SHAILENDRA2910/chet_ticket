@@ -1,0 +1,190 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHANGE VALUES FOR THEME */
+/* Palette taken from the live Chetak brand system:
+   deep indigo #322B54, teal #2A939D / #47BCC8, pale tints #EFF5F7 / #95E9F1,
+   grey #6B6B6B, scarlet #DF013C. */
+:root {
+  --radius: 0.75rem;
+  --background: #f4f9fa;
+  --foreground: #1e1839;
+  --card: #ffffff;
+  --card-foreground: #1e1839;
+  --popover: #ffffff;
+  --popover-foreground: #1e1839;
+  --primary: #322b54;
+  --primary-foreground: #f8f7ff;
+  --secondary: #eaf2f5;
+  --secondary-foreground: #1e1839;
+  --muted: #eaf2f5;
+  --muted-foreground: #6b6b7a;
+  --accent: #eaf2f5;
+  --accent-foreground: #1e1839;
+  --destructive: #c4022f;
+  --border: #dde8ec;
+  --input: #dde8ec;
+  --ring: #322b54;
+  --chart-1: #322b54;
+  --chart-2: #2a939d;
+  --chart-3: #47bcc8;
+  --chart-4: #c4022f;
+  --chart-5: #665a9e;
+  --sidebar: #322b54;
+  --sidebar-foreground: #e9e6f5;
+  --sidebar-primary: #47bcc8;
+  --sidebar-primary-foreground: #1e1839;
+  --sidebar-accent: rgba(255, 255, 255, 0.13);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.14);
+  --sidebar-ring: #47bcc8;
+}
+
+.dark {
+  --background: #12102a;
+  --foreground: #eef0fa;
+  --card: #1a1738;
+  --card-foreground: #eef0fa;
+  --popover: #1a1738;
+  --popover-foreground: #eef0fa;
+  --primary: #47bcc8;
+  --primary-foreground: #12102a;
+  --secondary: #241f4a;
+  --secondary-foreground: #eef0fa;
+  --muted: #241f4a;
+  --muted-foreground: #a09cc0;
+  --accent: #241f4a;
+  --accent-foreground: #eef0fa;
+  --destructive: #ff4d6d;
+  --border: rgba(238, 240, 250, 0.12);
+  --input: rgba(238, 240, 250, 0.16);
+  --ring: #47bcc8;
+  --chart-1: #47bcc8;
+  --chart-2: #eef0fa;
+  --chart-3: #2a939d;
+  --chart-4: #ff4d6d;
+  --chart-5: #a09cc0;
+  --sidebar: #1a1738;
+  --sidebar-foreground: #eef0fa;
+  --sidebar-primary: #47bcc8;
+  --sidebar-primary-foreground: #12102a;
+  --sidebar-accent: rgba(255, 255, 255, 0.1);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(238, 240, 250, 0.12);
+  --sidebar-ring: #47bcc8;
+}
+
+/* Project-specific design tokens layered on top of the base theme. */
+@theme {
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Chetak brand */
+  --color-brand: #322b54;
+  --color-brand-soft: #ecebf7;
+  --color-teal: #2a939d;
+  --color-teal-soft: #dcf0f2;
+  --color-aqua: #47bcc8;
+
+  /* Surfaces */
+  --color-ivory: #f4f9fa;
+  --color-sand: #eaf2f5;
+  --color-ink: #1e1839;
+  --color-ink-soft: #2a2450;
+  --color-steel: #6b6b7a;
+
+  /* Semantic */
+  --color-success: #16794f;
+  --color-success-soft: #e2f1e9;
+  --color-warning: #a8701c;
+  --color-warning-soft: #faf0db;
+  --color-critical: #c4022f;
+  --color-critical-soft: #fbe3ea;
+  --color-info: #35608e;
+  --color-info-soft: #e7eef6;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: var(--background);
+  }
+
+  ::selection {
+    background-color: #322b54;
+    color: #f8f7ff;
+  }
+}
+
+@layer utilities {
+  /* Editorial micro-label used across the operational screens. */
+  .label-eyebrow {
+    font-size: 0.6875rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+
+  .hairline {
+    border-color: var(--border);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
